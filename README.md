@@ -11,6 +11,11 @@ Latex for dissertation writing and beyond
 
 * `sudo apt install texmaker texlive texlive-lang-hungarian`
 
+### Google Scholar Button
+
+* [Firefox](https://addons.mozilla.org/hu/firefox/addon/google-scholar-button/)
+* [Chrome](https://chrome.google.com/webstore/detail/google-scholar-button/ldipcbpaocekfooobnbcddclnhejkcpn?hl=hu)
+
 ## References and further read
 
 * [Wettl Ferenc - Latex Kézikönyv](https://math.bme.hu/latex/lakk.html) & [1-2. fejezet](https://math.bme.hu/latex/lakk_free.pdf)
