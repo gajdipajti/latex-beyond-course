@@ -20,5 +20,6 @@ Latex for dissertation writing and beyond
 
 * [Wettl Ferenc - Latex Kézikönyv](https://math.bme.hu/latex/lakk.html) & [1-2. fejezet](https://math.bme.hu/latex/lakk_free.pdf)
 * [Latex 69 percben](https://math.bme.hu/latex/dl/latex69.pdf) & [Latex 78 percben](https://math.bme.hu/latex/dl/latex78.pdf)
+* [Latex in 30 minutes](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
 * [LianTze Lim - LaTeX: More Than Just Academic Papers and Theses](https://www.overleaf.com/articles/latex-more-than-just-academic-papers-and-theses/cyfvvyfrpmyn)
 * [Griechisch Erika - LaTeX: nem csak cikkekhez vagy dolgozatokhoz](https://www.overleaf.com/articles/latex-nem-csak-cikkekhez-vagy-dolgozatokhoz/xwnkwqznvbxz)
