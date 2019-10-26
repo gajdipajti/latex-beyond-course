@@ -1,0 +1,104 @@
+\documentclass[12pt,a4paper,titlepage,twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\pagestyle{plain}
+\usepackage{amsmath}
+\usepackage{gensymb}  % \degree https://www.overleaf.com/learn/latex/Questions/How_can_I_write_a_%C2%B0_(degree)_symbol_in_LaTeX%3F
+\usepackage{anysize}
+\usepackage[pdftex]{graphicx}
+\usepackage{fancyhdr} % https://www.ctan.org/pkg/fancyhdr
+\usepackage[magyar]{babel}
+\def\magyarOptions{defaults=prettiest}
+\frenchspacing
+\usepackage{paralist} % https://www.ctan.org/pkg/paralist
+% https://www.overleaf.com/learn/latex/Glossaries
+% \usepackage{acronym} % https://www.ctan.org/pkg/acronym
+\usepackage{setspace}
+\usepackage{soul}	% https://www.ctan.org/pkg/soul
+\usepackage{lipsum} % https://www.ctan.org/pkg/lipsum
+\usepackage{lmodern}
+\usepackage{titlepic}
+\usepackage{tcolorbox}
+\usepackage{caption}
+\usepackage{flafter}
+\usepackage{hyperref} % https://www.ctan.org/pkg/hyperref
+\usepackage{doi} % https://ctan.org/pkg/doi
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+%\renewcommand{\labelenumi}{\alph{enumi})}
+
+\pagestyle{fancy}
+\setlength{\headheight}{15pt}
+\marginsize{30mm}{20mm}{25mm}{25mm}
+\fancyhf{} 
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\footnotesize\rightmark}
+\fancyhead[RE]{\footnotesize\leftmark}
+%\fancyfoot{}
+
+\begin{titlepage}
+
+\title
+{
+	\textbf{A következő nagy dolog a tudományterületemen} \\
+	\vspace{0.5cm}
+	Ph.D. értekezés
+}
+\author
+{
+	Szerző:
+	\\\textbf{Sztachanov Tamás}	
+	\\[2cm]Témavezető:
+	\\\textbf{Teszt Elek}
+	~\\[4cm]Imaginárius Doktori Iskola
+	~\\Szegedi Tudományegyetem
+}
+\date
+{
+	2019\\ Szeged
+}
+\titlepic{\includegraphics[width=4cm]{figs/Cc-by-nc-sa_icon.png}}
+\end{titlepage}
+
+\begin{document}
+\makeatother
+
+\maketitle
+
+\tableofcontents
+
+\begin{spacing}{1.5}
+\newpage
+%\include{sections/0-abbreviations}
+%\include{sections/1-introduction}
+%\include{sections/2-literature}
+%\include{sections/3-goals}
+%\include{sections/4-methods}
+%\include{sections/5-results}
+%\include{sections/6-conclusion}
+%\include{sections/7-sameinenglish}
+%\include{sections/8-solongandthanksforthefish}
+
+\end{spacing}
+%clear the page style !!!
+\begin{spacing}{1}
+%\include{sections/9-publications}
+\addcontentsline{toc}{section}{Irodalomjegyzék}
+\begin{thebibliography}{999}
+% https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
+% APA szabvány + cím dőlt + kiadványszám félkövér
+\itemsep0em
+%Bevezető
+\bibitem{abbe-jena}\href{https://de.wikipedia.org/wiki/Datei:Ernst_Abbe_memorial.JPG}{https://de.wikipedia.org/wiki/Datei\:Ernst\_Abbe\_memorial.JPG}
+\mbox{[\textit{2019.09.01.}]}
+%Irodalom
+\bibitem{brewster}Brewster, D. (1834). XIX. \textit{On the colours of natural bodies.} Earth and Environmental Science Transactions of The Royal Society of Edinburgh, \textbf{12(2)}, 538-545.;
+\mbox{\doi{10.1017/S0080456800031203}}
+\bibitem{valeur}Valeur, B., \& Berberan-Santos, M. N. (2011): \textit{A brief history of fluorescence and phosphorescence before the emergence of quantum theory.} Journal of Chemical Education, \textbf{88(6)}, 731-738.;
+\mbox{\doi{10.1021/ed100182h}}
+\bibitem{herschel}Herschel, Sir J. F. W. (1845): \textit{On a case of superficial colour presented by a homogeneous liquid internally colourless.}  Phil. Trans. R. Soc. London, vol. \textbf{135}: 143-145;
+\mbox{\doi{10.1098/rstl.1845.0004}}
+\bibitem{stokes}Stokes, G. G. (1852). \textit{XXX. On the change of refrangibility of light.} Philosophical transactions of the Royal Society of London, \textbf{(142)}, 463-562.;
+\end{thebibliography}
+\end{spacing}
+\end{document}
