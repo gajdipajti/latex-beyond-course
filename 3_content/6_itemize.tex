@@ -1,0 +1,203 @@
+\documentclass[12pt,a4paper,titlepage,twoside]{article} % legyen külön oldal, jelezze a hibákat
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{fancyhdr}
+
+% Magyarítás
+\def\magyarOptions{defaults=prettiest}
+\usepackage[magyar]{babel}
+\frenchspacing	% https://tex.stackexchange.com/questions/4705/double-space-between-sentences
+
+% Tegyünk ki egy logót.
+\usepackage{titlepic}	% https://ctan.org/pkg/titlepic
+						% Pl az egyetem logóját kirakni
+\usepackage{graphicx}	% Képek kezelése
+\usepackage{caption}	% https://www.ctan.org/pkg/caption
+						% A caption viselkedjen captionként
+
+% További csomagok
+\usepackage{lmodern}	% Betűket javítsuk ki
+\usepackage{soul}		% https://www.ctan.org/pkg/soul
+						% Áthúzás \st{}, aláhúzás \ul{}
+\usepackage{lipsum}		% Szöveg generálás
+						% \lipsum[1-8]
+\usepackage{amsmath}	% https://www.overleaf.com/learn/latex/Aligning%20equations%20with%20amsmath
+						% Matematika
+\usepackage{hyperref}	% https://www.ctan.org/pkg/hyperref
+						% Külső és belső (!!!) hivatkozások
+
+% Állítsuk be az oldalakat
+\usepackage{anysize}	% https://ctan.org/pkg/anysize
+\marginsize{30mm}{20mm}{25mm}{25mm}
+
+% ... és a sorközt
+\usepackage{setspace}	% https://ctan.org/pkg/setspace
+
+% ... és pimpeljük fel
+% https://www.overleaf.com/learn/latex/Headers_and_footers
+% \usepackage{fancyhdr} % https://www.ctan.org/pkg/fancyhdr
+\pagestyle{fancy}
+\setlength{\headheight}{15pt}
+\fancyhf{} 	% Takarít
+% Kétoldalas dokumentum esetén fejléc
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\footnotesize\rightmark}
+\fancyhead[RE]{\footnotesize\leftmark}
+\fancyfoot[CE,CO]{\today}
+\fancyfoot[LE,RO]{Szerző, T. et al.}
+
+% Ábrák számozása
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{subsection}
+
+\begin{titlepage}
+\title{\textbf{A következő nagy dolog}}
+\author{Sztahanov Elemér\thanks{jómagam} \and Főnök Ferenc\thanks{Corresponding Author}}
+\date{\today}
+\titlepic{\includegraphics[width=4cm]{figs/Cc-by-nc-sa_icon.png}}
+
+\end{titlepage}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Megígérem hogy csak ezt fogom írni.
+\begin{center}	% Rendezzük középre, az indentálás nem kötelező, de az olvasónak segít
+	\includegraphics[width=0.9\textwidth, angle=5]{figs/71795715_2451578561753126_9033394225919557632_n.jpg}
+\end{center}
+\end{abstract}
+
+\tableofcontents
+\begin{spacing}{1.5}	% Kapcsoljuk be a másfeles sorközt
+\newpage
+
+Helló Világ! Ez csak egy mezítlábas \LaTeX{} dokumentum, semmi csicsával.
+
+\section{Fejezet címem}
+% http://www.lorumipse.hu/
+Lórum ipse hülés velő keszkeny és bégi jövő. Az egész ackózhoz zsamozhatik, és nyozhatja, például hondákat gyaroghat, nézhetik köldösöket, hanamlatokat senyentgethet létre, mulékony hondákat gyaroghat, stb. A kízet általában egy holás, de ez ackóztól kodik. Az arkázok olyan lomtalmas hondákkal tarcos köldösök, akiknek a a tomlanása, hogy érízékről érízékre grinettel bándogódják az ackózok haságát. Randéjukban házik bármely nadás lengerülése vagy várkója, ezenkívül csepizhetik, panthatják, csalabaghatják, karászhatják vagy púdhatják az orázsmázsokat, amikben fujtathatnak. Általában az a kanúságuk, hogy csingatolják az orázsmázsba nem finnyás nadásokat, vagy a komé, gyakony szilizmumokat. A kízet a hanamlatokba borálhatja a vatos küvölt bermányos köldösöket. Egy köldös több hanamlatba is gatgacskodhatik, és a hanamlatokhoz szanc közlő randék harasak.
+
+% Adjunk a hivatkozásnak egy csavart magyar nyelven az \aref{} paranccsal!
+Hivatkozzuk meg az ábránkat (\ref{fig:starterpack}. \figurename), és ne feledjük a szövegben hamarabb hivatkozunk, mint ahogy \aref{fig:starterpack}. ábra következne. 
+
+\begin{figure}[!hbt]
+	\begin{center}
+		\includegraphics[scale=0.5]{figs/72876529_2457717027805946_1450758038972530688_n.png}
+	\end{center}
+	\caption{\textit{Ez az ábra mutatja az állapotot, amikor végre leültem és nekikezdtem az írásnak. \st{A tiltott oldal: https://www.facebook.com/MemingPhD/}}}
+	\label{fig:starterpack}
+\end{figure}
+
+\lipsum[1-7]
+
+\subsection{Hivatkozások}
+
+Erre azért kattintsunk: \href{https://www.facebook.com/MemingPhD/}{mémek} vagy inkább erre \url{https://youtu.be/UKBvaOLDem0}
+
+\subsection{valami ide is lesz}
+Erről a rostalásokat, az alást, a foros hurkomot, a kénicét, a kulan hurkomot, az emény, hatlan és cátust, a páros palja lenség hetlen ipatot törös észeren könnyít. Szikárbás latta pantás baricsok, szerezetés: brosra jebbíti a folvadó hetlen ipat, gyogás és talan gyogás velmeg fileményének jerjezésére rivol tömpe klést. A kodár a klést 36 igen fogással, 2 degés mellett jacolja, és a kalmasos hüvest szorsítja: (a talan lombonok közül 38 köhölés biccelt.) Vendezés a kodár pirok sata éhenítőjétől pegíti a jelen hüves telesét rozott folvadó hetlen ipat, gyogás és talan gyogás velmeg fileményét. Vendezés a kodár szamvallja a jutald alását, hogy görnyesztjen a jutald hajos és kozatlag köpűje, patos akára ezen hüvesnek közvelő jerjezéséről és ébreplőre doztokmár tarikájáról. Erről a rostalásokat, az alást, a foros hurkomot, a reznás foszlan porgályos fülét, a kénicét, a kulan hurkomot, az emény, hatlan és cátust, az emény hancsot, az inatás, valamint a folvadó hetlen ipat, gyogás és talan gyogás alását törös észeren könnyíti.
+
+\subsection{Matematikai képleteink}
+
+Lehet szövegbe írni $\tau^{2} \leq \Omega_{frc}$ vagy az egyes környezeteket használni: számozott egysoros (\ref{eq:quantum}. képlet), többsoros, több egyenlet, mátrix (\ref{eq:matrix}. képlet), bonyolultabb (\ref{eq:Maxwell}. képlet).
+
+\begin{equation}
+	\Phi_f = \frac{N_e}{N_a} = \frac{k_{f}}{k_{f} + k_{nr}}
+	\label{eq:quantum}
+\end{equation}
+
+\begin{multline*}
+	\Delta(x) = 3x^6 + 14x^5y + 590x^4y^2 + 19x^3y^3\\ 
+	- 12x^2y^4 - 12xy^5 + 2y^6 - a^3b^3 + \frac{1}{\sqrt{x}}
+\end{multline*}
+
+\begin{align*} 
+	2x - 5y &=  8 \\
+	3x + 9y &=  -12
+	\label{eq:align}
+\end{align*}
+
+\begin{equation}
+	\begin{matrix}
+		1 & 0\\
+		0 & 1
+	\end{matrix}
+	\label{eq:matrix}
+\end{equation}
+
+% https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics
+\begin{subequations}
+\label{eq:Maxwell}
+Maxwell's equations:
+\begin{align}
+        B'&=-\nabla \times E,         \label{eq:MaxB} \\
+        E'&=\nabla \times B - 4\pi j, \label{eq:MaxE}
+\end{align}
+\end{subequations}
+
+\subsubsection{Táblázatok}
+
+% https://www.overleaf.com/learn/latex/Tables
+\begin{table}
+	\centering
+	\begin{tabular}{ |c|l|p{3cm}| } 
+		 \hline
+		 cell1cell5cell5 & cell2 & cell3 \\ 
+		 cell4cell5 & cell5cell5cell5 & cell6 \\ 
+		 cell7 & cell8cell5 & cell9 \\ 
+		 \hline
+	\end{tabular}
+	\label{tab:table}
+	\caption{Errefelé lehet még nézelődni: https://www.overleaf.com/learn/latex/Tables}
+\end{table}
+
+\subsection{második}
+Erről a rostalásokat, az alást, a foros hurkomot, a kénicét, a kulan hurkomot, az emény, hatlan és cátust, a páros palja lenség hetlen ipatot törös észeren könnyít. Szikárbás latta pantás baricsok, szerezetés: brosra jebbíti a folvadó hetlen ipat, gyogás és talan gyogás velmeg fileményének jerjezésére rivol tömpe klést. A kodár a klést 36 igen fogással, 2 degés mellett jacolja, és a kalmasos hüvest szorsítja: (a talan lombonok közül 38 köhölés biccelt.) Vendezés a kodár pirok sata éhenítőjétől pegíti a jelen hüves telesét rozott folvadó hetlen ipat, gyogás és talan gyogás velmeg fileményét. Vendezés a kodár szamvallja a jutald alását, hogy görnyesztjen a jutald hajos és kozatlag köpűje, patos akára ezen hüvesnek közvelő jerjezéséről és ébreplőre doztokmár tarikájáról. Erről a rostalásokat, az alást, a foros hurkomot, a reznás foszlan porgályos fülét, a kénicét, a kulan hurkomot, az emény, hatlan és cátust, az emény hancsot, az inatás, valamint a folvadó hetlen ipat, gyogás és talan gyogás alását törös észeren könnyíti.
+
+\subsubsection{Felsorolások}
+
+Sima felsorolás:
+\begin{itemize}
+	\item egy
+	\item kettő
+\end{itemize}
+
+Számozott felsorolás:
+\begin{enumerate}
+	\item egy
+	\item kettő, három
+\end{enumerate}
+
+Fogalmak definiálásához:
+\begin{description}
+	\item[Első] első pont
+	\item[második] második pont
+\end{description}
+
+\section{Fejezet kettő}
+% http://www.lorumipse.hu/
+Lórum ipse hülés velő keszkeny és bégi jövő. Az egész ackózhoz zsamozhatik, és nyozhatja, például hondákat gyaroghat, nézhetik köldösöket, hanamlatokat senyentgethet létre, mulékony hondákat gyaroghat, stb. A kízet általában egy holás, de ez ackóztól kodik. Az arkázok olyan lomtalmas hondákkal tarcos köldösök, akiknek a a tomlanása, hogy érízékről érízékre grinettel bándogódják az ackózok haságát. Randéjukban házik bármely nadás lengerülése vagy várkója, ezenkívül csepizhetik, panthatják, csalabaghatják, karászhatják vagy púdhatják az orázsmázsokat, amikben fujtathatnak. Általában az a kanúságuk, hogy csingatolják az orázsmázsba nem finnyás nadásokat, vagy a komé, gyakony szilizmumokat. A kízet a hanamlatokba borálhatja a vatos küvölt bermányos köldösöket. Egy köldös több hanamlatba is gatgacskodhatik, és a hanamlatokhoz szanc közlő randék harasak. 
+
+Lesz itt még háború \aref{fig:references}. \figurename  szerint! Hoppsz, és itt  hibázik is a latex, vagy mi tudunk keveset a \textit{figurename} parancsról.
+
+\begin{figure}[ptbh]
+	\centering
+	\includegraphics[scale=0.5]{figs/73040522_2454641708113478_5235417163610718208_n.jpg}
+	\caption{\textit{Majd a hivatkozásokkal is foglalkozunk.}}
+	\label{fig:references}
+\end{figure}
+
+\subsection{második alcím}
+Erről a rostalásokat, az alást, a foros hurkomot, a kénicét, a kulan hurkomot, az emény, hatlan és cátust, a páros palja lenség hetlen ipatot törös észeren könnyít. Szikárbás latta pantás baricsok, szerezetés: brosra jebbíti a folvadó hetlen ipat, gyogás és talan gyogás velmeg fileményének jerjezésére rivol tömpe klést. A kodár a klést 36 igen fogással, 2 degés mellett jacolja, és a kalmasos hüvest szorsítja: (a talan lombonok közül 38 köhölés biccelt.) Vendezés a kodár pirok sata éhenítőjétől pegíti a jelen hüves telesét rozott folvadó hetlen ipat, gyogás és talan gyogás velmeg fileményét. Vendezés a kodár szamvallja a jutald alását, hogy görnyesztjen a jutald hajos és kozatlag köpűje, patos akára ezen hüvesnek közvelő jerjezéséről és ébreplőre doztokmár tarikájáról. Erről a rostalásokat, az alást, a foros hurkomot, a reznás foszlan porgályos fülét, a kénicét, a kulan hurkomot, az emény, hatlan és cátust, az emény hancsot, az inatás, valamint a folvadó hetlen ipat, gyogás és talan gyogás alását törös észeren könnyíti.
+
+\lipsum[2-3]
+
+\end{spacing}
+
+\newpage
+\listoftables
+\listoffigures
+
+\end{document}

@@ -1,35 +1,37 @@
 \documentclass[12pt,a4paper,titlepage,twoside]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\pagestyle{plain}
 \usepackage{amsmath}
 \usepackage{gensymb}  % \degree https://www.overleaf.com/learn/latex/Questions/How_can_I_write_a_%C2%B0_(degree)_symbol_in_LaTeX%3F
-\usepackage{anysize}
 \usepackage[pdftex]{graphicx}
 \usepackage{fancyhdr} % https://www.ctan.org/pkg/fancyhdr
-\usepackage[magyar]{babel}
 \def\magyarOptions{defaults=prettiest}
+\usepackage[magyar]{babel}
 \frenchspacing
 \usepackage{paralist} % https://www.ctan.org/pkg/paralist
 % https://www.overleaf.com/learn/latex/Glossaries
 % \usepackage{acronym} % https://www.ctan.org/pkg/acronym
-\usepackage{setspace}
+\usepackage{setspace}	% https://ctan.org/pkg/setspace
 \usepackage{soul}	% https://www.ctan.org/pkg/soul
 \usepackage{lipsum} % https://www.ctan.org/pkg/lipsum
 \usepackage{lmodern}
-\usepackage{titlepic}
+\usepackage{titlepic}	% https://ctan.org/pkg/titlepic
 \usepackage{tcolorbox}
-\usepackage{caption}
+\usepackage{caption}	% https://ctan.org/pkg/caption
 \usepackage{flafter}
 \usepackage{hyperref} % https://www.ctan.org/pkg/hyperref
 \usepackage{doi} % https://ctan.org/pkg/doi
 \numberwithin{equation}{section}
 \numberwithin{figure}{section}
+\numberwithin{table}{section}
 %\renewcommand{\labelenumi}{\alph{enumi})}
+
+% Oldal méretek
+\usepackage{anysize}	% https://ctan.org/pkg/anysize
+\marginsize{30mm}{20mm}{25mm}{25mm}
 
 \pagestyle{fancy}
 \setlength{\headheight}{15pt}
-\marginsize{30mm}{20mm}{25mm}{25mm}
 \fancyhf{} 
 \fancyhead[LE,RO]{\thepage}
 \fancyhead[LO]{\footnotesize\rightmark}
