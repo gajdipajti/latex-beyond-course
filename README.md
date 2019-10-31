@@ -30,6 +30,10 @@ We will talk about two options, but you can keep your workflow. :)
 * [Yak shawing](https://en.wiktionary.org/wiki/yak_shaving)
 * [Bikeshedding](https://en.wiktionary.org/wiki/bikeshedding)
 
+## LaTeX mathematical symbols
+
+* [Mathematical Symbols](https://www.caam.rice.edu/~heinken/latex/symbols.pdf)
+
 ## References and further read
 
 * [Wettl Ferenc - Latex Kézikönyv](https://math.bme.hu/latex/lakk.html) & [1-2. fejezet](https://math.bme.hu/latex/lakk_free.pdf)
